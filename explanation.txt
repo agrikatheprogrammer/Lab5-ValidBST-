@@ -1,0 +1,28 @@
+To solve the problem,
+return True at the end of checking of conditions of BST
+or if node is null
+; if conditions are not satisfied, stop checking and return False:
+Conditions are - 
+all nodes on left subtree are lesser than parent
+all nodes on right subtree are more than parent
+and this applies to all of nodes' subtrees
+
+so set lower and upper bounds; 
+initializing them to -infinity and infinity,
+starting from root (top to bottom),
+if node val <=lower bound or node val >= upper bound
+return False (condition failed)
+
+repeat this recursively for children and theirs too and so on til all nodes are null (check complete; 
+children of leaf nodes i.e. null nodes reached;
+no condition failed; all nodes obey BST property;
+all calls returned trues)
+or condition broken in the subtree
+
+(divide and conquer)
+
+
+if check complete, return True
+
+
+
